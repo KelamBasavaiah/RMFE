@@ -1,0 +1,32 @@
+<app-layout-header></app-layout-header>
+<p style="font-size:30px;text-align: center;">Create Bug</p>
+<hr>
+<form [formGroup]="ownerForm">
+  <mat-grid-list cols="3" rowHeight="1:1">
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card  style="width: 100%;height: 50%;" layout="row" layout-align="center center"> 
+    
+        <mat-form-field style="width: 90%;" >
+          <input matInput placeholder="Enter Bug Name" formControlName="fBugName" [(ngModel)]="createBug.Bugname">
+          <mat-hint>Enter the Bug name for the Module</mat-hint>
+         
+        </mat-form-field>
+         <br><br>
+         <mat-form-field style="width: 90%;">
+            <mat-label>Bug status</mat-label>
+            <mat-select [(ngModel)]="createBug.Bugstatus" formControlName="fBugStatus">
+              <mat-option value="Bug Present">Bug Present</mat-option>
+            
+            </mat-select>
+           
+         </mat-form-field><br>
+        <button mat-raised-button color="primary" (click)="createBugs()" [disabled]="!ownerForm.valid" >Create Bug</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button color="warn" (click)="viewModule()">Back</button>
+      
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+  </mat-grid-list>
+</form>
+

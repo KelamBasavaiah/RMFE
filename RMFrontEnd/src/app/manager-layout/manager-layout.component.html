@@ -1,0 +1,123 @@
+<header>
+                
+    <br/>
+    <a href="#" class="btn btn-info btn-lg" style="float: right;position: relative;width: 10%;margin: 0% 2% 0% 2%; background-color: 
+    #5677fc; color: white;border: none;font-size: x-large;" (click)="logout()">
+      <span class="glyphicon glyphicon-log-out"></span> Log out
+    </a>
+ 
+
+<div class="nav nav-tabs">
+
+
+<div id="sidebar">
+<tr>
+            <td><div class="icon">
+                            <img src="../assets/MLogo.gif" height="70" width="70"  
+        />            </div></td>
+<td> 
+<div class="toggle-btn" (click)="sidenav.toggle()">
+    <span></span>
+    <span></span>
+    <span></span> 
+</div>
+
+</td>    
+
+ 
+</tr>
+
+
+ 
+
+</div>
+</div>
+</header>
+
+ <mat-sidenav-container> 
+<mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+(closed)="events.push('close!')">
+
+
+<table>
+
+<tr>
+
+<td class="active">
+ <a routerLink="home"  class="glyphicon glyphicon-home" style="color:  white;">&nbsp;Home</a> </td>
+ 
+<br/>
+<br/>
+<br/>
+<br/>
+
+</tr>
+<tr>
+            <td><div><a routerLink="add-project" class="glyphicon glyphicon-plus" style="color:white;">&nbsp;Create Project</a></div> 
+            </td>
+            <br/>
+            <br/>
+            <br/>
+<br/>
+</tr>                       
+<tr>
+
+<td>
+            
+ <div><a routerLink="viewProjects"class="glyphicon glyphicon-list" style="color:  white;">&nbsp;Projects</a></div> 
+</td>
+<br/>
+<br/>
+<br/>
+<br/>
+</tr>
+<tr>
+<td>
+  <div><a routerLink="assigned-modules" class="glyphicon glyphicon-tasks" style="color:  white;">&nbsp;Assigned Modules</a></div>
+</td>
+<br/>
+<br/>
+<br/>
+<br/>
+</tr>
+<tr>
+<td>
+            <div><a routerLink="completed-modules" class="glyphicon glyphicon-question-sign" style="color:  white;">&nbsp;Modules Completed</a></div> 
+    
+</td>
+<br/>
+<br/>
+<br/>
+<br/>
+</tr>
+<tr>
+<td>
+            <div><a routerLink="completed-projects" class="glyphicon glyphicon-check" style="color:  white">&nbsp;Projects Completed</a></div>
+</td>
+<br/>
+<br/>
+<br/>
+<br/>
+</tr>
+<tr>
+<td> <div><a routerLink="contact" class="glyphicon glyphicon-earphone" style="color:  white">&nbsp;Support</a> </div></td>
+<br/>
+<br/>
+<br/>
+<br/>
+</tr>  
+
+</table>
+
+</mat-sidenav>
+
+<mat-sidenav-content>
+
+
+    <router-outlet></router-outlet>
+
+ 
+
+
+</mat-sidenav-content>
+</mat-sidenav-container>   

@@ -1,0 +1,27 @@
+
+<div *ngIf="projects!=null">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+            <th scope="col">Project Name</th>
+            <th scope="col">Project Description</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">View</th>
+        </tr>
+    </thead>
+        <tbody >
+            <tr *ngFor="let p of projects">
+              
+                <td>{{p.ProjectName}}</td>
+                <td>{{p.ProjectDescription}}</td>
+                <td> {{p.ProjectStartDate | date:'dd/MM/yyyy'}}</td>
+                <td>{{p.ProjectEndDate | date:'dd/MM/yyyy'}}</td>
+                <td><button  class="btn btn-info" (click)="viewModules(p.ProjectId)">View Modules</button> </td>
+            </tr>
+        </tbody>
+        
+    </table>
+    </div>
+    <div *ngIf="projects==null">No projects found</div>
+    

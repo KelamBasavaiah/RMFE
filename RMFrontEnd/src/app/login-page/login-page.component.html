@@ -1,0 +1,51 @@
+
+<html style="background-color: black;">
+  <br>
+<body>
+  <!-- <p class="welcome">
+    Welcome to marga
+  </p>  -->
+  <div class="container welcome">
+    
+    <div style="margin-top: 20.5%; width: 800px; font-size: 45px;" class="text"></div>
+  </div>
+  
+ <div style="width:fit-content;">
+  <p style="font-size: 30px;"  class="greeting"></p>
+  <!-- <p class="wel">
+     welcome to Marga
+  </p> -->
+
+    <div style="margin-top: 3%;" class="imgg"> 
+      <img style="padding-left: 5%;" src="../../assets/Cmp.PNG">
+  <br>
+     <div class="text">
+      Marga release management system consists of modules such as managers,developers,tester.
+      Release management is process that entails,the management,planning,
+      scheduling and controlling of an entire 
+      software built through every stage and environment involved,
+      including testing and deploying software releases. 
+     </div>
+   </div> 
+  
+            <!-- <button class="btn btn-dark" type="submit" id="adm" (click)="adminlogin()">ADMIN </button> -->
+            <!-- <a type="button" href="/admin-login.component.html" class="btn btn-lg btn-success" >New Page</a> -->
+            <button class="btn striped-shadow white" id="adm" (click)="adminlogin()"><span>Admin</span></button>
+
+            <!-- <button class="btn btn-dark" style="color:white;" id="usr" (click)="userlogin()"  >User</button> -->
+            <button class="btn striped-shadow white" id="usr" (click)="userlogin()"><span>User</span></button>
+<!-- <img  class="fimg"src="assets/bbimg.jpg">  -->
+
+
+        <canvas id="canvas" width="1400" height="600"></canvas>
+        
+
+
+ </div>
+   <div>
+     <router-outlet></router-outlet>
+ </div>  
+</body>
+</html>
+
+ 

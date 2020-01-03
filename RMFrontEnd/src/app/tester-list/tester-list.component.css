@@ -1,0 +1,19 @@
+div{
+    margin-left: 40%;
+    
+} 
+.sha{
+    box-shadow: cyan;
+}
+
+  label{
+      font-weight: normal;
+  }
+  table{
+    position: absolute;
+    height: 800xp;
+     width: 800xp;
+     text-align: center;
+     box-shadow: 5px 7px 10px dimgray;
+     border-radius: 6%;
+ }

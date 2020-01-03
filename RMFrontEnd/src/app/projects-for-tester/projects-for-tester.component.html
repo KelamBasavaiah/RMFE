@@ -1,0 +1,38 @@
+
+<div class="row" *ngIf="projects!=null">
+    <table mat-table [dataSource]="projects" class="mat-elevation-z8" style="width: 100%;">
+    
+         
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Project Name </th>
+          <td mat-cell *matCellDef="let projects"> {{projects.ProjectName}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> Project Description </th>
+          <td mat-cell *matCellDef="let projects"> {{projects.ProjectDescription}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="startdate">
+            <th mat-header-cell *matHeaderCellDef> Project StartDate </th>
+            <td mat-cell *matCellDef="let projects"> {{projects.ProjectStartDate}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="endDate">
+            <th mat-header-cell *matHeaderCellDef> Project EndDate </th>
+            <td mat-cell *matCellDef="let projects"> {{projects.ProjectEndDate}} </td>
+        </ng-container>
+        <ng-container matColumnDef="viewmodulebutton">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let projects"> <button  mat-button color="primary" (click)="viewModules(projects.ProjectId)">view Modules</button> </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+    
+    <div *ngIf="projects==null" style="background-color: white;text-align: center;">
+        <br/><br/>
+        No Projects found
+</div>

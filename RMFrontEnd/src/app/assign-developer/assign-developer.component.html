@@ -1,0 +1,62 @@
+ <app-layout-header></app-layout-header>
+<form name="form" (ngsubmit)="f.form.valid && assign()" #f="ngForm">
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <mat-label>Employee List</mat-label>
+      <mat-select [(value)]=value class="form-control" name="name"
+        [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+        <mat-option *ngFor="let developer of developerList" value="developer.EmployeeName">
+          {{developer.EmployeeName}}
+        </mat-option>
+      </mat-select>
+      <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+        <div *ngIf="f.name.errors.required">Name is required</div>
+      </div>
+    </mat-form-field>
+
+    <table>
+      <br>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Start Date
+        </td>
+        <td>
+          <input id="durat" placeholder="Select Duration" name="durat" [(ngModel)]="assignDeveloper.EmpStartDate"
+            type="text" bsDatepicker [bsConfig]="datePickerConfig" class="form-control" [minDate]='minnDate'
+          
+            [ngClass]="{ 'is-invalid': submitted && f.startDate.errors }">
+        </td> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        <div *ngIf="submitted && f.durat.errors" class="invalid-feedback">
+          <div *ngIf="f.durat.errors.required">Start Date is required</div>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          End Date
+        </td>
+        <td>
+          <input id="durati" placeholder="Select Duration" name="durati" [(ngModel)]="assignDeveloper.EmpEndDate"
+            type="text" bsDatepicker [bsConfig]="datePickerConfig1" [minDate]="assignDeveloper.EmpStartDate"
+             [ngClass]="{ 'is-invalid': submitted && f.endDate.errors }">
+        </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div *ngIf="submitted && f.durati.errors" class="invalid-feedback">
+          <div *ngIf="f.durati.errors.required">End Date is required</div>
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <td colspan="2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button mat-raised-button color="primary" class="btn-btn-info">Assign</button>
+          &nbsp;&nbsp;
+          <button mat-raised-button color="accent" (click)="back()" class="btn-btn-info">Back</button>
+        </td>
+      </tr>
+      <br>
+    </table>
+    <br>
+  </div>
+</form> 
+

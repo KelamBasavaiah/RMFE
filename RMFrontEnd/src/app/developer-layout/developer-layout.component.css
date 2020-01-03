@@ -1,0 +1,57 @@
+button:hover{
+    padding: 20px; 
+    transition: all 0.5s;
+    cursor: pointer;
+    }
+    
+    ul{
+        font-size: larger;
+        background-color:black;
+        
+    }
+    
+mat-sidenav,mat-sidenav-content{
+  padding: 16px;
+  font-size: small;
+  
+  
+}
+mat-sidenav{
+  background-color: #009688;
+  margin: 0% 0% 5% 0%;
+}
+mat-sidenav-container{
+  height: 90vh;
+  
+ 
+}
+td{
+  padding: 0px 10px;
+  border-bottom: 1px solid white;
+
+}
+#sidebar .toggle-btn span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #009688;
+  margin: 5px 0px;
+}
+
+a{
+
+  font-style:Helvetica,Arial,sans-serif;
+  font-size:large;
+  color: black;
+  
+}
+img{
+  border-radius: 50%;
+}
+
+h1{
+  font-family:Georgia;
+}
+header{
+  background-color: #b0bec5;
+}

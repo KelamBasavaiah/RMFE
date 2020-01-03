@@ -1,0 +1,49 @@
+<app-layout-header></app-layout-header>
+<div >
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <mat-form-field>
+    <mat-label>Employee List</mat-label>
+    <mat-select [(value)]=value>
+      <mat-option *ngFor="let tester of testerList" [value]="tester.EmployeeName">
+        {{tester.EmployeeName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <table >
+    <br>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Start Date
+        </td>
+          <td>
+                  <input id="durat" placeholder="Select Duration" name="durat" [(ngModel)]="assigntester.EmpStartDate"
+                  type="text" bsDatepicker [bsConfig]="datePickerConfig" class="form-control" [minDate]='minnDate'>
+          </td>  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+      </tr>
+      <br>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          End Date
+        </td>
+        <td>
+            <input id="durati" placeholder="Select Duration" name="durati" [(ngModel)]="assigntester.EmpEndDate"
+            type="text" bsDatepicker [bsConfig]="datePickerConfig1" [minDate]='assigntester.EmpStartDate'class="form-control">
+          </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </tr>
+      <br>
+      <tr>
+        <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button mat-raised-button color="primary" (click)="assign()" class="btn-btn-info">Assign</button>
+  &nbsp;&nbsp;
+  <button mat-raised-button color="accent" (click)="back()" class="btn-btn-info">Back</button>
+        </td>
+      </tr>
+      <br>
+  </table>
+  <br>
+</div>
+
+    
+
+    

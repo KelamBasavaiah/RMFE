@@ -1,0 +1,42 @@
+<div >
+    
+    <table class="table table-hover">
+        <thead>
+            <tr>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Employee EmailId</th>
+        </tr>
+    </thead>
+        <tbody >
+            <tr *ngFor='let admin of adds; let i = index;'>
+              
+                <td><input  type="text" placeholder="Employee Name" [(ngModel)]="admin.EmployeeName"
+                    name=" EmployeeName"
+                    #EmployeeName="ngModel" required ><span *ngIf=" EmployeeName.errors &&  EmployeeName.touched">
+                            <span *ngIf=" EmployeeName.errors.required" class="alert alert-danger"><alert type="warning">
+                                           <strong>Name Must</strong>  
+                                         </alert></span>
+                    </span></td>
+                    <td><input  type="text" placeholder="Email Id" [(ngModel)]="admin.Employee_mail"
+                        name=" Employee_mail"
+                        #Employee_mail="ngModel" required ><span *ngIf=" Employee_mail.errors &&  Employee_mail.touched">
+                                <span *ngIf=" Employee_mail.errors.required" class="alert alert-danger"><alert type="warning">
+                                               <strong>Email Must</strong>  
+                                             </alert></span>
+                        </span></td>
+               <td><button *ngIf='i==adds.length-1' class="btn btn-success" (click)= "addEmployees()">Add</button></td>
+                    <td><button *ngIf='i!=0' class="btn btn-danger" (click)=" removeEmployees(i)">Remove</button></td>
+            </tr>
+        </tbody>
+        
+    </table>
+    
+    <div>
+           
+           <button class="btn btn-primary" (click)="addEmployee()" style="width: 10; position: inherit; ">Insert</button>
+   
+       </div>
+    </div>
+<div>
+    {{status}}
+</div>

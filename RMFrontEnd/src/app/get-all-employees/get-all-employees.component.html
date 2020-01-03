@@ -1,0 +1,21 @@
+<div *ngFor="let a of employees">
+    <table class="table table-hover">
+        <thead>
+            <tr>              
+                <th scope="col">Employee Name</th>
+                <th scope="col">Employee MailId</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{a.EmployeeName}}</td>
+                <td>{{a.Employee_mail}}</td>
+                
+                <!-- <td><button class="btn btn-primary" (click)="Edit(a)" style="width: 70%;
+                    height: 20%;background-color: none; border: white; color: white;font-size: larger;">Edit</button></td>
+                    <td><button class="btn btn-primary" (click)="Edit(a)" style="width: 70%;
+                        height: 20%;background-color: none; border: white; color: white;font-size: larger;">Save</button></td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>

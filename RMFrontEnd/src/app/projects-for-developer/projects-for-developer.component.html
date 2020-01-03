@@ -1,0 +1,39 @@
+<div *ngIf="project.count!=0">
+    <table mat-table [dataSource]="project" matSort class="mat-elevation-z8" style="width: 100%;">
+          
+             <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef><strong style="font-size: larger;">Project Name</strong> </th>
+              <td mat-cell *matCellDef="let proj"> {{proj.ProjectName}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef><strong style="font-size: larger;"> ProjectDescription</strong>  </th>
+              <td mat-cell *matCellDef="let proj"> {{proj. ProjectDescription}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="startdate">
+                    <th mat-header-cell *matHeaderCellDef><strong style="font-size: larger;"> Project StartDate</strong>  </th>
+                    <td mat-cell *matCellDef="let proj"> {{proj.ProjectStartDate}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="enddate">
+                    <th mat-header-cell *matHeaderCellDef><strong style="font-size: larger;">Project EndDate</strong>   </th>
+                    <td mat-cell *matCellDef="let proj"> {{proj.ProjectEndDate}} </td>
+            </ng-container>
+            
+            <ng-container matColumnDef="viewmodulebutton">
+                    <th mat-header-cell *matHeaderCellDef><strong style="font-size: larger;"> Project EndDate</strong>  </th>
+                    <td mat-cell *matCellDef="let proj"> <button class="btn btn-info" (click)="viewmodules(proj.ProjectId)">View Modules</button> </td>
+            </ng-container>
+    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
+            
+    
+    </table>
+    </div> 
+    <div *ngIf="project.count==0" style="background-color: white;text-align: center;">
+            <br/><br/>
+            <b style="font-size: x-large;">No Projects found</b>
+    </div>
+    

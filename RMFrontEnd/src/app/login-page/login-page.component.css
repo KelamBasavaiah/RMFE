@@ -1,0 +1,318 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+html,
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: #212121;
+  
+}
+.container {
+  
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color:whitesmoke;
+  position: absolute;
+  top:0%;
+  
+  
+
+}
+.text {
+  font-weight: 100%;
+   font-size: 180%;
+  
+  
+  color:whitesmoke;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.dud {
+  color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+#adm{
+    position: absolute;
+    left:43%;
+    top:50%
+    
+    
+}
+#usr{
+    position: absolute;
+    left:53%;
+    top:50%
+    
+    
+
+} 
+    
+a{
+    text-decoration:none;
+    color:white;
+}
+.btn btn-dark{
+    color: whitesmoke;
+
+}
+/* .fimg{
+     width: 100%;    
+     background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+    body {
+         background-color: #000;     
+         /* background-image: url("src/assets/bbimg.jpg"); */ 
+         margin: 0;
+        overflow: hidden; 
+        background-repeat: no-repeat;
+        background-size: cover;
+         max-width: 100%;
+        overflow-x: hidden;  
+    
+    
+      
+}
+
+
+@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  background: #fff;
+  max-width: 100%;
+  overflow-x: hidden;
+  
+}
+
+@import 'https://fonts.googleapis.com/css?family=Bungee+Shade';
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+ body {
+   background:black; 
+ /* background-image: url("src/assets/bbimg.jpg");
+ background-size: cover; */
+
+  
+  
+}
+html{
+  max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.greeting {
+  font-weight: 300;
+  position: absolute;
+  font-size: 2rem;
+  left: 0;
+  top: 1%;
+  left:79%;
+  color: whitesmoke;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* transform: translate(-50%, -50%); */
+}
+.welcome{
+  color:whitesmoke;
+  position: absolute;
+  top: -10%;
+  right: 73%;
+  
+  font-weight: lighter;
+   font-size: 80px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.wel{
+
+  font-weight: lighter;
+  padding-left: 30%;
+  font-size: 33px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.text{
+  position: absolute;
+  padding-left: 10%;
+  padding-top: 28%;
+  text-align: left;
+  font-size: 18px;
+   text-align: left;
+  color: whitesmoke;
+  font-weight:lighter;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.imgg{
+    position: absolute;
+    left: 70.3%;
+}
+
+ div {
+  margin: 3rem auto;
+  max-width: 400px;
+  width: 70%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+} 
+button {
+  overflow: visible;
+  border: 0;
+  padding: 0;
+  margin: 1.8rem;
+}
+.btn.striped-shadow span {
+  display: block;
+  position: relative;
+  z-index: 2;
+  border: 5px solid;
+}
+.btn.striped-shadow.white span {
+  border-color: #fff;
+  color: #fff;
+  /* background:darkblue; */
+}
+
+.btn.striped-shadow.blue span {
+  border-color: #4183D7;
+  background: #77bfa1;
+  color: #4183D7;
+}
+.btn.striped-shadow.dark span {
+  border-color: #393939;
+  background: #77bfa1;
+  color: #393939;
+}
+
+.btn {
+  font-family: 'Bungee Shade', sans-serif;
+  height: 50px;
+  line-height: 60px;
+  display: inline-block;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 1.35rem;
+  transition: opacity .3s, z-index .3s step-end, -webkit-transform .3s;
+  transition: opacity .3s, z-index .3s step-end, transform .3s;
+  transition: opacity .3s,
+    z-index .3s step-end,
+    transform .3s,
+    -webkit-transform .3s;
+  z-index: 1;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  width: 100px;
+  height: 48px;
+  line-height: 38px;
+}
+
+button.btn.striped-shadow.white:after, button.btn.striped-shadow.white:before {
+  background-image: linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 5px,
+    #fff 5px,
+    #fff 10px,
+    transparent 10px
+  );
+}
+
+button.btn.striped-shadow.blue:after, button.btn.striped-shadow.blue:before {
+  background-image: linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 5px,
+    #4183D7 5px,
+    #4183D7 10px,
+    transparent 10px
+  );
+}
+
+button.btn.striped-shadow.dark:after, button.btn.striped-shadow.dark:before {
+  background-image: linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 5px,
+    #393939 5px,
+    #393939 10px,
+    transparent 10px
+  );
+}
+
+button.btn.striped-shadow:hover:before {
+  max-height: calc(100% - 10px);
+}
+
+button.btn.striped-shadow:after {
+  width: calc(100% - 4px);
+  height: 8px;
+  left: -10px;
+  bottom: -9px;
+  background-size: 15px 8px;
+  background-repeat: repeat-x;
+}
+button.btn.striped-shadow:after, button.btn.striped-shadow:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  transition: max-height .3s, width .3s, -webkit-transform .3s;
+  transition: transform .3s, max-height .3s, width .3s;
+  transition: transform .3s, max-height .3s, width .3s, -webkit-transform .3s;
+}
+
+.btn.striped-shadow:hover {
+  -webkit-transform: translate(-12px, 12px);
+  -ms-transform: translate(-12px, 12px);
+  transform: translate(-12px, 12px);
+  z-index: 3;
+}
+
+button.btn.striped-shadow:hover:after, button.btn.striped-shadow:hover:before {
+  -webkit-transform: translate(12px, -12px);
+  -ms-transform: translate(12px, -12px);
+  transform: translate(12px, -12px);
+}
+button.btn.striped-shadow:before {
+  width: 8px;
+  max-height: calc(100% - 5px);
+  height: 100%;
+  left: -12px;
+  bottom: -5px;
+  background-size: 8px 15px;
+  background-repeat: repeat-y;
+  background-position: 0 100%;
+}
+
+

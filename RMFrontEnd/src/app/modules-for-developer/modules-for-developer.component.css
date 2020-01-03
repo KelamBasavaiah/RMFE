@@ -1,0 +1,18 @@
+div{
+    color: mintcream;
+     float: left; 
+     position: relative; 
+     height: 110%; 
+     width: 90%;  
+    font-size: larger;
+    font-style: italic;
+}
+
+table{
+    padding:20px;
+    align-content: center;
+    color: mintcream;
+    font-size: larger;
+    font-style: italic;
+    margin-top: 3%;
+}

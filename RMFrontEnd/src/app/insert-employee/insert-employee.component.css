@@ -1,0 +1,28 @@
+button {
+    /* Green */
+    border: none;
+    /* color: white; */
+    padding: 15px ;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+border-radius: 10%;
+
+  }
+  label{
+      font-weight: normal;
+  }
+  input::placeholder{
+      font-size: small;
+  }
+  textarea::placeholder{
+    font-size: small;
+  }
+  table{
+    margin: 7% 0% 5% 0%;
+       background-color:none;
+       /* color: white; */
+       /* border: 2px solid; */
+       font-size: larger;
+   }

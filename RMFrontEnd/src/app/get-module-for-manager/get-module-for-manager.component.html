@@ -1,0 +1,68 @@
+<header>
+                
+    <br/>
+    <a href="#" class="btn btn-info btn-lg" style="float: right;position: relative;width: 10%;margin: 0% 2% 0% 2%; background-color: 
+    #2196F3; color: white;">
+      <span class="glyphicon glyphicon-log-out"></span> Log out
+    </a>
+ 
+
+<div class="nav nav-tabs">
+
+
+<div id="sidebar">
+<tr>
+            <td><div class="icon">
+                            <img src="../assets/MLogo.gif" height="60" width="60"  
+        />            </div></td>
+<td> 
+<div class="toggle-btn" (click)="sidenav.toggle()">
+    <span></span>
+    <span></span>
+    <span></span> 
+</div>
+
+</td>    
+
+ 
+</tr>
+
+
+ 
+
+</div>
+</div>
+</header>
+  <div  >
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                    <th scope="col">Module Name</th>
+                    <th scope="col">Module Description</th>
+                    <th scope="col">Module Status</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">Assign</th>
+                </tr>
+            </thead>
+                <tbody >
+                    <tr *ngFor="let m of modules">
+                      
+                        <td>{{m.ModuleName}}</td>
+                        <td> {{m.ModuleDescription}}</td>
+                        <td>{{m.ModuleStatus}}</td>
+                        <td>{{m.ModuleStartDate | date:'dd/MM/yyyy'}}</td>
+                        <td>{{m.ModuleEndDate | date:'dd/MM/yyyy'}}</td>
+                        <td><button  (click)="Assign(m.ModuleId)" style="color: white;">Assign to developer</button> </td>
+
+                    </tr>
+                </tbody>
+                
+            </table>
+            </div>
+ <div>
+    <button  (click)="viewProject()" style="color: white;">Back</button>
+</div> 
+<div *ngIf="modules==null">
+     No Modules
+</div>

@@ -1,0 +1,62 @@
+
+body
+{
+   font-family: sans-serif;
+    
+}
+
+.pricing_table_wdg {  
+	border:1px solid #c4cbcc;
+	border-radius:6px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	float:left;
+	margin-top: 25px;
+	padding:30px;
+}
+.pricing_table_wdg ul { 
+	list-style:none; 
+	float:left; 
+	width:250px; 
+	margin:0; 
+	border:1px solid #f2f3f3;
+	padding:5px;
+	text-align:center;
+	background-color:#FFF;
+}
+
+.pricing_table_wdg ul li {  
+	border-bottom:1px dashed #cfd2d2;
+	padding:10px 0;
+}
+.pricing_table_wdg ul li:first-child { 
+	color:#FFFFFF;
+	font-size:18px;
+	font-weight:bold;
+	background:#5677fc;
+}
+.pricing_table_wdg ul li:nth-child(2) { 
+	background:#fbfbfb;
+}
+.pricing_table_wdg ul li:nth-child(3) { 
+	font-size:20px;
+	font-weight:bold;
+}
+.pricing_table_wdg ul li:nth-child(n+4) { 
+	font-size:14px;
+}
+.pricing_table_wdg ul li:last-child button { 
+	color:#F0F0F0;
+	text-decoration:none;
+	font-weight:bold;
+	display:block;
+	border-radius:10px;
+	border:1px solid #c4cbcc;
+	padding:10px;
+	margin:5px 0;
+	background: #0061bb;
+	
+}
+label{
+	padding:18.8px;
+}

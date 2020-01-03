@@ -1,0 +1,12 @@
+
+<div style="text-align: center;">
+    <div class="heading">
+     <h3>BugStatus</h3>
+   </div> 
+   <select style="width: 20%;" [formControl]="bugStatus" placeholder="Enter the Bugstatus" name="BugStatus">
+       <option value="Bug Fixed">Bug Fixed</option>
+   </select>
+    <br/><br/>
+   <button class="btn btn-info"(click)="UpdateStatus()" [disabled]="bugStatus.invalid">Update</button>
+   </div>
+   

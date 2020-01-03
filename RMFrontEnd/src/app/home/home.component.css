@@ -1,0 +1,26 @@
+div{
+
+    background-image: url('../../assets/home1.jpg'); 
+    height: 110%;
+    width:30%;
+    background-size: cover;
+    float:right;
+}
+h1{
+    font-display: block;
+    font-size: x-large;
+    font-family: cursive;
+}
+p{
+    align-content: center;
+    /* margin: 0% 10% 0% 5%;  */
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#37474F;
+}
+h1{
+    font-display: block;
+    font-size: larger;
+    font-family: cursive;
+    /* margin: 10% 20% 10% 10%; */
+}

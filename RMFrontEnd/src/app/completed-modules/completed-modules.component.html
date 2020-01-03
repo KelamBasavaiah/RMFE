@@ -1,0 +1,41 @@
+<div>
+<div *ngIf="modules!=null" >
+ 
+    
+    <table class="content-table">
+        
+    <thead>
+
+            <tr>
+                    <th>Module Name</th>
+                    <th>Developer Name</th>
+                    <th>Tester Name</th>
+                    <th>Status</th>
+                  </tr>
+    </thead>
+      <tbody>
+            <tr *ngFor="let module of modules" >                 
+                    <td >{{module.ModuleName}}</td>
+                    <td >{{module.DeveloperName}}</td>
+                    <td >{{module.TesterName}}</td>
+                    <td >{{module.ModuleStatus}}</td>
+                    
+            </tr>
+                 
+
+      </tbody>
+
+      
+    </table>
+    
+    
+</div>
+</div>
+<div *ngIf="modules==null" style="background-color: white;text-align: center;">
+        <br/><br/>
+        No Completed Modules
+</div>
+<div>
+        <br/><br/>
+        {{status}}
+</div>

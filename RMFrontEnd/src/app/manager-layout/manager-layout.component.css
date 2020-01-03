@@ -1,0 +1,56 @@
+
+mat-sidenav,mat-sidenav-content{
+  padding: 16px;
+  font-size:larger;
+  
+  
+}
+mat-sidenav{
+  background-color: #5677fc;
+}
+mat-sidenav-container{
+  height: 90vh;
+ 
+  
+ 
+}
+td{
+  padding: 0px 10px;
+  border-bottom: 1px solid white;
+
+}
+#sidebar .toggle-btn span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background:white;
+  margin: 5px 0px;
+}
+
+a{
+
+  font-style:Helvetica,Arial,sans-serif;
+  font-size:large;
+  color: black;
+  
+}
+img{
+  border-radius: 50%;
+}
+
+h1{
+  font-family:Georgia;
+}
+button{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    
+}
+header{
+  background-color:#5677fc;
+ 
+
+}

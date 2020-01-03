@@ -1,0 +1,48 @@
+<div>
+  <form name="form" (ngSubmit)="f.form.valid && addProject()" #f="ngForm"  novalidate>
+    <label style="width:40%">Project Name</label>
+    <input type="text" placeholder="Project name" [(ngModel)]="create.ProjectName" style="width: 40%; height: 30px;"
+      name="projectname" #projectname="ngModel" required />
+      <span *ngIf="f.submitted && projectname.errors">
+        <br>
+        <span class="span" *ngIf="projectname.errors.required">Name is Required</span>
+      </span>
+    <br /><br>
+    <label style="width: 40%;">Project Description</label>
+    <textarea type="text" placeholder="Enter project Description" [(ngModel)]="create.ProjectDescription"
+      style="width: 40%; height: 30px;" name="description" #description="ngModel" required></textarea>
+      <span
+      *ngIf="description.errors && f.submitted">
+      <br>
+      <span class="span" *ngIf="description.errors.required">        
+        Description is Required     
+      </span>
+    </span>
+    <br /><br />
+    <label style="width: 40%;">Project Start</label>
+     <input  placeholder=" select start date" name="ProjectStartDate" [(ngModel)]="create.ProjectStartDate" type="text"
+      bsDatepicker [bsConfig]="datePickerConfig" [minDate]='minnDate'
+       style="width: 40%; height: 30px;" #ProjectStartDate="ngModel" required>
+      <span *ngIf="(ProjectStartDate.errors && f.submitted)">
+        <br>
+      <span class="span" *ngIf="ProjectStartDate.errors.required">Fill Start Date </span> 
+    </span>
+    <br /><br />
+    <label style="width: 40%;">Project End</label>
+    <input id="durati" placeholder="Select End date"  [(ngModel)]="create.ProjectEndDate" type="text"
+      bsDatepicker [minDate]='create.ProjectStartDate' [bsConfig]="datePickerConfig1" style="width: 40%; height: 30px;" #ProjectEndDate="ngModel" name="=ProjectEndDate" required>
+      <span *ngIf="(ProjectEndDate.errors && f.submitted)">
+        <br>
+      <span class="span" *ngIf="ProjectEndDate.errors?.required">Fill End Date </span>
+    </span>
+    <br /><br /><br />
+
+
+    <br />
+    <br />
+
+    <button class="btn btn-primary">Create</button>
+  </form>
+
+
+</div>

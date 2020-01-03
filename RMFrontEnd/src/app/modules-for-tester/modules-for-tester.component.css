@@ -1,0 +1,14 @@
+button{
+    padding: 10px; 
+    
+   }
+   
+   th{
+       font-size: larger;
+   }
+   mat-elevation-z8{
+       width: 60%;
+   }
+   .mat-elevation-z8{
+       color: white;
+   }
