@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{BsDatepickerConfig} from 'ngx-bootstrap/datepicker';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import{Modules} from '../model/modules.model'
 import{AddModule} from '../service/addmodule.service'
@@ -11,6 +11,8 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./create-modules.component.css']
 })
 export class CreateModulesComponent implements OnInit {
+  createForm:FormGroup;
+  submitted=false;
 
   public minnDate:Date = new Date();
   public adds:any[]=[{
@@ -23,7 +25,9 @@ export class CreateModulesComponent implements OnInit {
   datePickerConfig:Partial<BsDatepickerConfig>
   datePickerConfig1:Partial<BsDatepickerConfig>
  add:Modules
+ show:boolean=true;
  result:any;
+ addd:boolean=false;
  projname:string
 projectEndDate:Date;
  projDate:number;
@@ -42,7 +46,7 @@ projectEndDate:Date;
   
   
    addModules(){
-     debugger
+    debugger;
      this.addModule.addmodules(this.projname,this.adds).subscribe((res=>{
       if(res==true){
         this.toaster.info("Modules Created Successfully")
@@ -65,6 +69,7 @@ projectEndDate:Date;
    
 
   ngOnInit() {
+
    
 var project;
      this.myroute.params.subscribe((p)=>
@@ -85,6 +90,7 @@ var project;
     console.log(this.maxDate)
     }
     addModuless(){
+      this.show=false;
       this.adds.push({
         ModuleName:'',
         ModuleDescription:'',
