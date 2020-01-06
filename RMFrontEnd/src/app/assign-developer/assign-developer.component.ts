@@ -19,6 +19,7 @@ status:string;
 value:string="name";
 moduleId:string;
 minnDate:Date=new Date();
+submitted=false;
 
 
 

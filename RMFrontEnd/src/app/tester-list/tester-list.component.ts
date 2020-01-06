@@ -7,6 +7,8 @@ import { formatDate } from '@angular/common';
 import{Modules} from '../model/modules.model'
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import {FormGroup} from '@angular/forms';
+  import { from } from 'rxjs';
 
 @Component({
   selector: 'app-tester-list',
@@ -21,6 +23,7 @@ assigntester:Modules
 value:string="name";
 moduleId:string;
 status:string;
+submitted;
 
 minnDate:Date=new Date();
   constructor(private testerService:TesterService,private myactivate:ActivatedRoute,private router:Router,
