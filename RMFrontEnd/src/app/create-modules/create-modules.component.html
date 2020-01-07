@@ -36,7 +36,7 @@
                                          fill Description</span>
                     </span></td>
                 <td>  <input id="durat"  placeholder="Select Duration-Start" name="durat_{{i}}"  [(ngModel)]="add.ModuleStartDate"
-                    type="text" bsDatepicker [bsConfig]="datePickerConfig" [minDate]='minnDate' [maxDate]='maxDate' name="ModuleStartDate" #ModuleStartDate="ngModel" required> </td>
+                    type="text" bsDatepicker [bsConfig]="datePickerConfig"  name="ModuleStartDate" #ModuleStartDate="ngModel" required> </td>
                     <span *ngIf="(ModuleStartDate.errors && f.submitted && show)">
                         <br>
                       <span class="span" *ngIf="ModuleStartDate.errors.required">Fill StartDate </span> 

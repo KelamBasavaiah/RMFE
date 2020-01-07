@@ -24,14 +24,15 @@ value:string="name";
 moduleId:string;
 status:string;
 submitted;
+moduleEndDate:string;
 
 minnDate:Date=new Date();
   constructor(private testerService:TesterService,private myactivate:ActivatedRoute,private router:Router,
     private toaster:ToastrService) { 
     this.assigntester=new Modules();
-
-    this.datePickerConfig=Object.assign({},{containerClass:'theme-dark-blue'},{dateInputFormat:'YYYY-MM-DD'})
-    this.datePickerConfig1=Object.assign({},{containerClass:'theme-dark-blue'},{dateInputFormat:'YYYY-MM-DD'})
+    this.moduleEndDate=localStorage.getItem("moduleEndDate")
+    this.datePickerConfig=Object.assign({},{containerClass:'theme-dark-blue',showWeekNumbers:false,maxDate: new Date(this.moduleEndDate)},{dateInputFormat:'YYYY-MM-DD'})
+    this.datePickerConfig1=Object.assign({},{containerClass:'theme-dark-blue',showWeekNumbers:false,maxDate:new Date(this.moduleEndDate)},{dateInputFormat:'YYYY-MM-DD'})
     this.testerService.getTesters().subscribe((res=>{
       this.testerList=res
       console.log(this.testerList)
