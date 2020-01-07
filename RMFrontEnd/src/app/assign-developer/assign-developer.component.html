@@ -25,7 +25,7 @@
         </td>
         <td>
           <input id="durat" placeholder="Select Duration" [(ngModel)]="assignDeveloper.EmpStartDate"
-            type="text" bsDatepicker [bsConfig]="datePickerConfig" class="form-control" [minDate]='minnDate'
+            type="text" bsDatepicker [bsConfig]="datePickerConfig" class="form-control"
           
            name="EmpStartDate" #EmpStartDate="ngModel" required>
         </td> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
@@ -41,7 +41,7 @@
         </td>
         <td>
           <input id="durati" placeholder="Select Duration" name="durati" [(ngModel)]="assignDeveloper.EmpEndDate"
-            type="text" bsDatepicker [bsConfig]="datePickerConfig1" [minDate]="assignDeveloper.EmpEndDate"
+            type="text" bsDatepicker [bsConfig]="datePickerConfig1" [minDate]="assignDeveloper.EmpStartDate"
             name="EmpEndDate" #EmpEndDate="ngModel" required class="form-control">
         </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span *ngIf="f.submitted && EmpEndDate.errors">

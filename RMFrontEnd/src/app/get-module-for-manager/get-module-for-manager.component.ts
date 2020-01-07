@@ -35,8 +35,11 @@ modules:any;
 
   
   }
-  Assign(moduleid){
-    this.myRouter.navigate(['assign-developer',moduleid])
+  Assign(m){
+    localStorage.setItem("moduleStartDate",m.ModuleStartDate)
+    localStorage.setItem("moduleEndDate",m.ModuleEndDate)
+    console.log(m)
+    this.myRouter.navigate(['assign-developer',m.ModuleId])
   }
   viewProject(){
     this.myRouter.navigate(['/managerLayout'])

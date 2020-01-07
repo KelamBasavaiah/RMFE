@@ -19,6 +19,8 @@ status:string;
 value:string="name";
 moduleId:string;
 minnDate:Date=new Date();
+moduleStartDate:string;
+moduleEndDate:string;
 submitted=false;
 
 
@@ -26,9 +28,12 @@ submitted=false;
 
   constructor(private formBuilder:FormBuilder,private developerService:DeveloperService,private myactivate:ActivatedRoute,private router:Router,private toaster:ToastrService) {
     this.assignDeveloper=new Modules();
-
-    this.datePickerConfig=Object.assign({},{containerClass:'theme-dark-blue'},{dateInputFormat:'YYYY-MM-DD'})
-    this.datePickerConfig1=Object.assign({},{containerClass:'theme-dark-blue'},{dateInputFormat:'YYYY-MM-DD'})
+    this.moduleStartDate=localStorage.getItem("moduleStartDate");
+    console.log(this.moduleStartDate)
+    this.moduleEndDate=localStorage.getItem("moduleEndDate");
+    this.datePickerConfig=Object.assign({},{containerClass:'theme-dark-blue',showWeekNumbers:false},{dateInputFormat:'YYYY-MM-DD',
+    minDate:new Date(this.moduleStartDate),maxDate:new Date(this.moduleEndDate)})
+    this.datePickerConfig1=Object.assign({},{containerClass:'theme-dark-blue',showWeekNumbers:false},{dateInputFormat:'YYYY-MM-DD',maxDate:new Date(this.moduleEndDate)})
     this.developerService.getDeveloper().subscribe((res=>{
       this.developerList=res
       console.log(this.developerList)
