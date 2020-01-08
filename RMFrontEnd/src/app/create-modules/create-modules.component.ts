@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import{BsDatepickerConfig} from 'ngx-bootstrap/datepicker';
-import { FormBuilder, FormGroup,Validators,FormControl,FormArray,NgForm } from '@angular/forms';
+import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import{Modules} from '../model/modules.model'
-import{AddModule} from '../service/addmodule.service'
+import { Modules } from '../model/modules.model'
+import { AddModule } from '../service/addmodule.service'
 import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-create-modules',
@@ -14,13 +14,12 @@ export class CreateModulesComponent implements OnInit {
   createForm: FormGroup;
   submitted = false;
 
-
-  public minnDate:Date = new Date();
-  public adds:any[]=[{
-    Module_name:'',
-    Module_description:'',
-    Fromdate:'',
-    Todate:''
+  public minnDate: Date = new Date();
+  public adds: any[] = [{
+    Module_name: '',
+    Module_description: '',
+    Fromdate: '',
+    Todate: ''
 
   }]
   datePickerConfig: Partial<BsDatepickerConfig>
@@ -45,66 +44,58 @@ export class CreateModulesComponent implements OnInit {
  maxDate:new Date(this.projectEndDate) })
   }
 
+  addModules() {
+    debugger;
+    this.addModule.addmodules(this.projname, this.adds).subscribe((res => {
+      if (res == true) {
 
-  
-  
-   addModules(){
-     debugger
-     this.addModule.addmodules(this.projname,this.adds).subscribe((res=>{
-      if(res==true){
         this.toaster.info("Modules Created Successfully")
       }
-      else{
+      else {
         this.toaster.error("No Modules added.Try again!!")
       }
 
-     }
-     ))
-     console.log(this.adds)
-     
-
-     
-
-      
-     }
+    }
+    ))
+    console.log(this.adds)
 
 
-   
+
+
+
+  }
+
+
+
 
   ngOnInit() {
-   
-var project;
-     this.myroute.params.subscribe((p)=>
-     {
-       project=p['projName'];
-       this.projname=project;
-       this.addModule.getProjectDate(project).subscribe((res=>
-        {
-          this.projectEndDate=res;
-          console.log(this.projectEndDate)
-        }))
-       
-        
-     })
+
+
+    var project;
+    this.myroute.params.subscribe((p) => {
+      project = p['projName'];
+      this.projname = project;
+    })
 
     //this.maxDate.setDate(this.projectEndDate.getDate());
-    console.log(this.projectEndDate.getDate());
-    console.log(this.maxDate)
-    }
-    addModuless(){
-      this.adds.push({
-        ModuleName:'',
-        ModuleDescription:'',
-        ModuleStartDate:'',
-        ModuleEndDate:''
-    
-      });
-    }
-    removeModules(i:number){
-      this.adds.splice(i,1);
-    }
-    
 
-    
+    console.log("hii")
+  }
+  addModuless() {
+    this.show = false;
+    this.adds.push({
+      ModuleName: '',
+      ModuleDescription: '',
+      ModuleStartDate: '',
+      ModuleEndDate: ''
+
+    });
+  }
+  removeModules(i: number) {
+    this.adds.splice(i, 1);
+  }
+
+
+
 
 }
