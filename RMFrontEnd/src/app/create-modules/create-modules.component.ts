@@ -11,9 +11,8 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./create-modules.component.css']
 })
 export class CreateModulesComponent implements OnInit {
-addMod:FormGroup;
-rows:FormArray;
-modFrom:FormGroup;
+  createForm: FormGroup;
+  submitted = false;
 
 
   public minnDate:Date = new Date();
@@ -24,30 +23,28 @@ modFrom:FormGroup;
     Todate:''
 
   }]
-  datePickerConfig:Partial<BsDatepickerConfig>
-  datePickerConfig1:Partial<BsDatepickerConfig>
- add:Modules
- result:any;
- projname:string
-projectEndDate:Date;
- projDate:number;
- public maxDate:Date;
+  datePickerConfig: Partial<BsDatepickerConfig>
+  datePickerConfig1: Partial<BsDatepickerConfig>
+  add: Modules
+  show: boolean = true;
+  result: any;
+  addd: boolean = false;
+  projname: string
+  projectEndDate: string;
+  projectStartDate:string;
+  constructor(private addModule: AddModule, private myroute: ActivatedRoute, private toaster: ToastrService) {
 
- 
-  constructor(private addModule:AddModule,private myroute:ActivatedRoute,private toaster:ToastrService
-    ,private fb:FormBuilder) {
-
-      this.addMod = this.fb.group({
-        items: [null, Validators.required],
-        items_value: ['no', Validators.required]
-      });
     
-    this.add=new Modules();
-    this.maxDate=new Date();
-  
-    this.datePickerConfig=Object.assign({},{containerClass:'theme-dark-blue',showWeekNumbers:false})
-    this.datePickerConfig1=Object.assign({},{containerClass:'theme-dark-blue'})
-   }
+    this.add = new Modules();
+    this.projectStartDate=localStorage.getItem("projectStartDate")
+    this.projectEndDate=localStorage.getItem("projectEndDate")
+    this.datePickerConfig = Object.assign({}, { containerClass: 'theme-dark-blue', showWeekNumbers: false,
+    minDate:new Date(this.projectStartDate),
+    maxDate:new Date(this.projectEndDate) })
+    this.datePickerConfig1 = Object.assign({}, { containerClass: 'theme-dark-blue',showWeekNumbers:false,
+ maxDate:new Date(this.projectEndDate) })
+  }
+
 
   
   
