@@ -33,6 +33,7 @@ import { TesterLayoutComponent } from './tester-layout/tester-layout.component';
 import { InsertEmployeeComponent } from './insert-employee/insert-employee.component';
 import { GetAllEmployeesComponent } from './get-all-employees/get-all-employees.component';
 import { AboutComponent } from './about/about.component';
+import{UpdateEmployeeComponent} from './update-employee/update-employee.component';
 
 
 const routes: Routes = [
@@ -111,7 +112,7 @@ const routes: Routes = [
  },
   
  
- 
+ {path:'updateemp/:employeename',component:UpdateEmployeeComponent},
 
   {
     path:'modules-for-developer',component:ModulesForDeveloperComponent,canActivate:[AuthGuard]

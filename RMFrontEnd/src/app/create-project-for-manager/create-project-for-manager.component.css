@@ -12,8 +12,9 @@
    
 } */
 
- div{
-    margin: 10% 20% 10% 10%;
+ form{
+    /* margin: 10% 20% 10% 10%; */
+    margin: 5% 10% 5% 5%;
 } 
 button {
     background-color:#536DFE;
@@ -41,3 +42,13 @@ button {
   textarea::placeholder{
     font-size: small;
   }
+div{
+
+    background-image: url('../../assets/mangif.gif'); 
+    height: 150%;
+    width:20%; 
+    background-size: cover;
+     float:right; 
+     background-position: top;
+     
+}

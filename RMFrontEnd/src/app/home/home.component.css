@@ -1,10 +1,13 @@
 div{
 
-    background-image: url('../../assets/home1.jpg'); 
+    background-image: url('../../assets/mangif.gif'); 
     height: 110%;
-    width:30%;
-    background-size: cover;
-    float:right;
+    width:20%;
+    
+    float:right; 
+    background-position: center;
+    
+
 }
 h1{
     font-display: block;
@@ -20,7 +23,8 @@ p{
 }
 h1{
     font-display: block;
-    font-size: larger;
+    font-size: x-large;
     font-family: cursive;
+    color: navy;
     /* margin: 10% 20% 10% 10%; */
 }

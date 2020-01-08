@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{BsDatepickerConfig} from 'ngx-bootstrap/datepicker';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup,Validators,FormControl,FormArray,NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import{Modules} from '../model/modules.model'
 import{AddModule} from '../service/addmodule.service'
@@ -11,6 +11,10 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./create-modules.component.css']
 })
 export class CreateModulesComponent implements OnInit {
+addMod:FormGroup;
+rows:FormArray;
+modFrom:FormGroup;
+
 
   public minnDate:Date = new Date();
   public adds:any[]=[{
@@ -30,7 +34,13 @@ projectEndDate:Date;
  public maxDate:Date;
 
  
-  constructor(private addModule:AddModule,private myroute:ActivatedRoute,private toaster:ToastrService) {
+  constructor(private addModule:AddModule,private myroute:ActivatedRoute,private toaster:ToastrService
+    ,private fb:FormBuilder) {
+
+      this.addMod = this.fb.group({
+        items: [null, Validators.required],
+        items_value: ['no', Validators.required]
+      });
     
     this.add=new Modules();
     this.maxDate=new Date();

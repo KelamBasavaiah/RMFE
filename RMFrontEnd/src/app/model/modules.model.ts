@@ -27,12 +27,17 @@ Bugname:string;
 Bugstatus:string;
 Bugid:string;
 authdata?:string;
-Employee_mail:string
+Employee_mail:string;
+Employee_addr:string;
+Employee_joinDate:Date;
+Employee_dob:Date;
+Employee_bgroup:string;
+
 
     constructor(emp_Id?,emp_Name?,proj_id?,proj_Name?,projdes?,mod_Id?,mod_Name?,
         mod_Des?,role?,m_status?,dev_Name?,tes_Name?,
         mod_date?,proj_date?,proj_date1?, mod_date1?,emp_date1?,emp_date2?,m_count?,t_count?,username?,password?,
-        bugname?,bugid?,bugstatus?,auth?,mailid?
+        bugname?,bugid?,bugstatus?,auth?,mailid?,addr?,jdate?,dob?,bgrp?
         ){
         
         this.ProjectName=proj_Name;
@@ -63,6 +68,10 @@ Employee_mail:string
         this.Bugid=bugid;
         this.authdata=auth;
         this.Employee_mail=mailid;
+        this.Employee_addr=addr;
+        this.Employee_joinDate=jdate;
+        this.Employee_dob=dob;
+        this.Employee_bgroup=bgrp;
 
     }
 }
