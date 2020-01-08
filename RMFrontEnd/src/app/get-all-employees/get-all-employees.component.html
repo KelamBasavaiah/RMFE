@@ -1,16 +1,28 @@
 <div *ngFor="let a of employees">
     <table class="table table-hover">
         <thead>
-            <tr>              
+            <tr>  
+                <th scope="col">Employee Id</th>            
                 <th scope="col">Employee Name</th>
                 <th scope="col">Employee MailId</th>
+                <th scope="col">Employee Address</th>
+                <th scope="col">Employee DOJ</th>
+                <th scope="col">Employee DOB</th>
+                <th scope="col">Blood Group</th>
             </tr>
         </thead>
         <tbody>
             <tr>
+                <td>{{a.EmployeeId}}</td>
                 <td>{{a.EmployeeName}}</td>
                 <td>{{a.Employee_mail}}</td>
-                
+                <td>{{a.Employee_addr}}</td>
+                <td>{{a.Employee_joinDate|date}}</td>
+                <td>{{a.Employee_dob|date}}</td>
+                <td>{{a.Employee_bgroup}}</td>
+                <td><button class=
+                    "btn btn-primary" (click)="UpdateEmp(a.EmployeeId)">Edit</button></td>
+                    
                 <!-- <td><button class="btn btn-primary" (click)="Edit(a)" style="width: 70%;
                     height: 20%;background-color: none; border: white; color: white;font-size: larger;">Edit</button></td>
                     <td><button class="btn btn-primary" (click)="Edit(a)" style="width: 70%;

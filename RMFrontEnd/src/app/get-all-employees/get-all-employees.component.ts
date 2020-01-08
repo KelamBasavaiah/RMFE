@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Modules} from '../model/modules.model';
+import {Router} from '@angular/router';
 import {AdminValueService} from '../service/adminlogin.service'
 @Component({
   selector: 'app-get-all-employees',
@@ -8,7 +9,7 @@ import {AdminValueService} from '../service/adminlogin.service'
 })
 export class GetAllEmployeesComponent implements OnInit {
 employees:Modules[]
-  constructor(private adminservice:AdminValueService) {
+  constructor(private adminservice:AdminValueService,private myroute:Router) {
     this.adminservice.getEmployee().subscribe((res)=>{
       this.employees=res;
     })
@@ -16,10 +17,10 @@ employees:Modules[]
 
   ngOnInit() {
   }
-  edit(employee){
-    this.adminservice.update(employee).subscribe((res)=>{
-      
-    })
+  
+  
+  UpdateEmp(employee){
+    this.myroute.navigate(['updateemp',employee])
   }
 
 }

@@ -1,42 +1,57 @@
-<div >
-    
+
+<div>
+
+
     <table class="table table-hover">
         <thead>
             <tr>
-            <th scope="col">Employee Name</th>
-            <th scope="col">Employee EmailId</th>
-        </tr>
-    </thead>
-        <tbody >
+                <th scope="col">Employee Name</th>
+                <th scope="col">Employee EmailId</th>
+                <th scope="col">Employee Address</th>
+                <th scope="col">Employee doj</th>
+                <th scope="col">Employee dob</th>
+                <th scope="col">Employee Blood Group</th>
+            </tr>
+        </thead>
+        <tbody>
             <tr *ngFor='let admin of adds; let i = index;'>
-              
-                <td><input  type="text" placeholder="Employee Name" [(ngModel)]="admin.EmployeeName"
-                    name=" EmployeeName"
-                    #EmployeeName="ngModel" required ><span *ngIf=" EmployeeName.errors &&  EmployeeName.touched">
-                            <span *ngIf=" EmployeeName.errors.required" class="alert alert-danger"><alert type="warning">
-                                           <strong>Name Must</strong>  
-                                         </alert></span>
-                    </span></td>
-                    <td><input  type="text" placeholder="Email Id" [(ngModel)]="admin.Employee_mail"
-                        name=" Employee_mail"
-                        #Employee_mail="ngModel" required ><span *ngIf=" Employee_mail.errors &&  Employee_mail.touched">
-                                <span *ngIf=" Employee_mail.errors.required" class="alert alert-danger"><alert type="warning">
-                                               <strong>Email Must</strong>  
-                                             </alert></span>
-                        </span></td>
-               <td><button *ngIf='i==adds.length-1' class="btn btn-success" (click)= "addEmployees()">Add</button></td>
-                    <td><button *ngIf='i!=0' class="btn btn-danger" (click)=" removeEmployees(i)">Remove</button></td>
+
+                <td><input type="text" placeholder="Employee Name" [(ngModel)]="admin.EmployeeName" name=" EmployeeName"
+                        #EmployeeName="ngModel">
+
+
+                </td>
+                <td><input type="text" placeholder="Email Id" [(ngModel)]="admin.Employee_mail" name=" Employee_mail"
+                        #Employee_mail="ngModel" >
+                  
+                </td>
+                <td><textarea type="text" placeholder="Residential Address" [(ngModel)]="admin.Employee_addr"
+                        name=" Employee_addr" #Employee_addr="ngModel">
+                        </textarea>
+                      
+                </td>
+                <td> <input id="durat" placeholder="Select DOJ" name="durat_{{i}}" [(ngModel)]="admin.Employee_joinDate"
+                        type="text" bsDatepicker [bsConfig]="datePickerConfig"> </td>
+
+                <td> <input id="durati" placeholder="Select DOB" name="durati_{{i}}" [(ngModel)]="admin.Employee_dob"
+                        type="text" bsDatepicker [bsConfig]="datePickerConfig1"> </td>
+                <td><input type="text" placeholder="Employee Blood Group" [(ngModel)]="admin.Employee_bgroup"
+                        name=" EmployeeName" #Employee_bgroup="ngModel">
+                   
+                </td>
+
+                <td><button *ngIf='i==adds.length-1' class="btn btn-success" (click)="addEmployees()">Add</button></td>
+                <td><button *ngIf='i!=0' class="btn btn-danger" (click)=" removeEmployees(i)">Remove</button></td>
             </tr>
         </tbody>
-        
+       
     </table>
-    
     <div>
-           
-           <button class="btn btn-primary" (click)="addEmployee()" style="width: 10; position: inherit; ">Insert</button>
-   
-       </div>
+        <button class="btn btn-primary" (click)="addEmployee()" style="width: 10; position: inherit; ">Insert</button>
     </div>
-<div>
-    {{status}}
 </div>
+
+   
+
+    
+

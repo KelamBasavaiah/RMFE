@@ -3,6 +3,7 @@ import {Modules} from '../model/modules.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { inherits } from 'util';
+import { Observable } from 'rxjs';
 @Injectable()
 export class Adminloginservice{
     adminlogin:any;
@@ -17,4 +18,5 @@ export class Adminloginservice{
         //return this.result;
 
     }
+    
 }

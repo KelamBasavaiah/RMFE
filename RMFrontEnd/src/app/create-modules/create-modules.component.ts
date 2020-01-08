@@ -32,6 +32,7 @@ export class CreateModulesComponent implements OnInit {
   projectEndDate: string;
   projectStartDate:string;
   constructor(private addModule: AddModule, private myroute: ActivatedRoute, private toaster: ToastrService) {
+
     
     this.add = new Modules();
     this.projectStartDate=localStorage.getItem("projectStartDate")
@@ -43,12 +44,11 @@ export class CreateModulesComponent implements OnInit {
  maxDate:new Date(this.projectEndDate) })
   }
 
-
-
   addModules() {
     debugger;
     this.addModule.addmodules(this.projname, this.adds).subscribe((res => {
       if (res == true) {
+
         this.toaster.info("Modules Created Successfully")
       }
       else {

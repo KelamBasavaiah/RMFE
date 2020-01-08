@@ -98,6 +98,7 @@ import { GetAllEmployeesComponent } from './get-all-employees/get-all-employees.
 import { AdminValueService } from './service/adminlogin.service';
 import{ ToastrModule} from'ngx-toastr';
   import { from } from 'rxjs';
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 
 const myRoutes:Route[]=[{path:'about',component:AboutComponent},
  {path:'home',component:HomeComponent},
@@ -149,7 +150,8 @@ const material = [MatTableModule];
     GetprojectForManagerComponent,
     LayoutHeaderComponent,
     InsertEmployeeComponent,
-    GetAllEmployeesComponent
+    GetAllEmployeesComponent,
+    UpdateEmployeeComponent
     
   ],
   imports: [

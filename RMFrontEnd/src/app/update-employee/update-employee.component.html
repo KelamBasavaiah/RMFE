@@ -1,0 +1,78 @@
+<form #form="ngForm" (submit)="update(form)" autocomplete="off"*ngFor="let admin of admins">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Employee ID</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name=EmployeeId #EmployeeId="ngModel" [(ngModel)]="admin.EmployeeId"  placeholder="EmployeeId" required readonly>
+        <div class="validation-error"*ngIf="EmployeeId.invalid && EmployeeId.touched">This field is required</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Employee Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text"  name=EmployeeName #EmployeeName="ngModel" [(ngModel)]="admin.EmployeeName" placeholder="Employee Name" required>
+        <div class="validation-error"*ngIf="EmployeeName.invalid && EmployeeName.touched">This field is required</div>  
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="lname">Employee Mail</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name=Employee_mail #Employee_mail="ngModel" [(ngModel)]="admin.Employee_mail" id="Employee_mail"  placeholder="Employee mail" required>
+          <div class="validation-error"*ngIf="Employee_mail.invalid && Employee_mail.touched">This field is required</div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-25">
+              <label for="lname">Employee  Address</label>
+            </div>
+            <div class="col-75">
+              <textarea type="text"  name=Employee_addr #Employee_addr="ngModel" [(ngModel)]="admin.Employee_addr" id="Employee_addr"  placeholder="Employee Addr" required>
+                <div class="validation-error"*ngIf="Employee_addr.invalid && Employee_addr.touched">This field is required</div>
+            </textarea>
+            </div>
+    </div>
+ 
+    <div class="row">
+            <div class="col-25">
+              <label for="lname">Description-1:</label>
+            </div>
+            <div class="col-75">
+              <input type="text"  name=Description_1 #Description_1="ngModel" [(ngModel)]="user.Description_1" id="Description-1"  placeholder="Description-1" required>
+              <div class="validation-error"*ngIf="Description_1.invalid && Description_1.touched">This field is required</div>
+            </div>
+    </div>
+    <div class="row">
+            <div class="col-25">
+              <label for="lname">Description-2:</label>
+            </div>
+            <div class="col-75">
+              <input type="text" name=Description_2 #Description_2="ngModel" [(ngModel)]="user.Description_2" id="Description-2"  placeholder="Description-2">
+              <div class="validation-error"*ngIf="Description_2.invalid && Description_2.touched">This field is required</div>
+            </div>
+    </div>
+    <div class="row">
+            <div class="col-25">
+              <label for="lname">Description-3:</label>
+            </div>
+            <div class="col-75">
+              <input type="text" name=Employee_bgroup #Employee_bgroup="ngModel" [(ngModel)]="admin.Employee_bgroup"  id="Employee_bgroup"  placeholder="Employee Blood Group">
+              <div class="validation-error"*ngIf="Employee_bgroup.invalid && Employee_bgroup.touched">This field is required</div>
+            </div>
+    </div>
+
+    <br><br>
+    
+    <div class="last">
+            <button mat-raised-button color="primary" type="submit"  [disabled]="form.invalid" >Update Product</button>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <!-- <button mat-raised-button color="warn" type="reset" (onClick)="resetForm()">Reset</button> -->
+    </div>
+  </form>
+
+
+

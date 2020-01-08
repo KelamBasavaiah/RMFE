@@ -33,7 +33,7 @@ td{
 #sidebar .toggle-btn span {
   display: block;
   width: 30px;
-  height: 2px;
+  height: 3px;
   background: #009688;
   margin: 5px 0px;
 }
@@ -50,8 +50,9 @@ img{
 }
 
 h1{
+ 
   font-family:Georgia;
 }
-header{
+ /* header{
   background-color: #b0bec5;
-}
+}  */

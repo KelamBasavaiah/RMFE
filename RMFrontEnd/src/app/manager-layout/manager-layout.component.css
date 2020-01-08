@@ -22,8 +22,8 @@ td{
 #sidebar .toggle-btn span {
   display: block;
   width: 30px;
-  height: 2px;
-  background:white;
+  height: 3px;
+  background:#5677fc;
   margin: 5px 0px;
 }
 
@@ -50,7 +50,7 @@ button{
     
 }
 header{
-  background-color:#5677fc;
+  background-color:white;
  
 
 }

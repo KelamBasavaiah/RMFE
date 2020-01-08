@@ -19,5 +19,8 @@ export class AdminValueService{
     update(employee):Observable<any>{
         return this.myHttp.put("https://localhost:44389/api/admin",employee)
     }
+    getdata(empid:string):Observable<any>{
+        return this.myHttp.get("https://localhost:44389/Values?empId="+empid);
+    }
     
 }
